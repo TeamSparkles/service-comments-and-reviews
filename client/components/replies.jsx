@@ -9,14 +9,16 @@ export default class Replies extends React.Component {
 	render() {
 		console.log(this.props)
 		return (
-		  <div className="comment">
+		  <div>
 				<span>
-					<Avatar />
+						<Avatar 
+						  isReply={true}
+					/>
 				</span>
 				<span className="card--name">
 					{this.props.reply.member.name}
 				</span>
-				<p>
+				<p className="text">
 					{this.props.reply.comment}
 				</p>
 			</div>
