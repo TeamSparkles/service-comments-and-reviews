@@ -2,13 +2,13 @@ import React from 'react';
 import Avatar from './avatar.jsx';
 import Replies from './replies.jsx';
 
+
 export default class Comment extends React.Component {
   constructor(props) {
 		super(props);
 	}
 
 	render() {
-		console.log(this.props.comment.replies);
     return (
 			<div>
 			  <span>

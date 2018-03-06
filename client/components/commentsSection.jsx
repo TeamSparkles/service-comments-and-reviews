@@ -32,8 +32,6 @@ export default class CommentsSection extends React.Component {
 
 	render() {
 		if (this.state.loaded) {
-			console.log(this.state.commentsArray);
-			
       return (
         <div className="card card--hasHoverShadow">
 				<h2>Discussions ({this.state.commentsArray.length})</h2>

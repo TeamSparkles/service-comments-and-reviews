@@ -7,13 +7,10 @@ export default class Replies extends React.Component {
 	}
 
 	render() {
-		console.log(this.props)
 		return (
 		  <div>
 				<span>
-						<Avatar 
-						  isReply={true}
-					/>
+					<Avatar isReply={true}/>
 				</span>
 				<span className="card--name">
 					{this.props.reply.member.name}
