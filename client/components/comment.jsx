@@ -23,9 +23,9 @@ export default class Comment extends React.Component {
 				  {this.props.commentInfo.comment}
 				</p>
 				<span>
-					<Date dateFormat={moment(this.props.commentInfo.created).format("YYYYMMDD")}/>
+					<Date unitTimeConverter={moment(this.props.commentInfo.created).format("YYYYMMDD")}/>
 				</span>
-				<div className="comment--replies--block">
+				<div className="replies--block">
 					<span>
 						{this.props.commentInfo.replies.map((reply, index) => 
 							<Replies 

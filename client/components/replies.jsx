@@ -17,11 +17,14 @@ export default class Replies extends React.Component {
 				<span className="comment--name">
 					{this.props.replyInfo.member.name}
 				</span>
-				<p className="comment--text">
+				<p className="replies--text">
 					{this.props.replyInfo.comment}
 				</p>
 				<span>
-					<Date unitTimeConverter={moment(this.props.replyInfo.created).format("YYYYMMDD")}/>
+					<Date 
+						unitTimeConverter={moment(this.props.replyInfo.created).format("YYYYMMDD")}
+						isReply={true}	
+					/>
 				</span>
 			</div>
 		)

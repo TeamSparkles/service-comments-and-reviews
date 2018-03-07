@@ -8,7 +8,9 @@ export default class Date extends React.Component {
 
 	render() {
 		return(
-			<span>{moment(this.props.unitTimeConverter).startOf("month").fromNow()}</span>
+			<span className={this.props.isReply ? "replies--date" : "comment--date"}>
+				{moment(this.props.unitTimeConverter).startOf("month").fromNow()}
+			</span>
 		)
 	}
 }
