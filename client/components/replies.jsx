@@ -1,5 +1,6 @@
 import React from 'react';
 import Avatar from './avatar.jsx';
+import Date from './date.jsx';
 var moment = require('moment');
 
 export default class Replies extends React.Component {
@@ -20,10 +21,7 @@ export default class Replies extends React.Component {
 					{this.props.replyInfo.comment}
 				</p>
 				<span>
-					{moment(moment(this.props.replyInfo.created)
-						.format("YYYYMMDD"))
-						.startOf("month")
-						.fromNow()}
+					<Date unitTimeConverter={moment(this.props.replyInfo.created).format("YYYYMMDD")}/>
 				</span>
 			</div>
 		)

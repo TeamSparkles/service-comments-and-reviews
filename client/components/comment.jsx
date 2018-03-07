@@ -1,6 +1,7 @@
 import React from 'react';
 import Avatar from './avatar.jsx';
 import Replies from './replies.jsx';
+import Date from './date.jsx';
 var moment = require('moment');
 
 export default class Comment extends React.Component {
@@ -9,6 +10,7 @@ export default class Comment extends React.Component {
 	}
 
 	render() {
+		console.log(moment(this.props.commentInfo.created));
     return (
 			<div>
 			  <span>
@@ -21,10 +23,7 @@ export default class Comment extends React.Component {
 				  {this.props.commentInfo.comment}
 				</p>
 				<span>
-					{moment(moment(this.props.commentInfo.created)
-						.format("YYYYMMDD"))
-						.startOf("month")
-						.fromNow()}
+					<Date dateFormat={moment(this.props.commentInfo.created).format("YYYYMMDD")}/>
 				</span>
 				<div className="comment--replies--block">
 					<span>
