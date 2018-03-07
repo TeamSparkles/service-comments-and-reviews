@@ -1,5 +1,6 @@
 import React from 'react';
 import Avatar from './avatar.jsx';
+var moment = require('moment');
 
 export default class Replies extends React.Component {
 	constructor(props){
@@ -12,12 +13,18 @@ export default class Replies extends React.Component {
 				<span>
 					<Avatar isReply={true}/>
 				</span>
-				<span className="card--name">
-					{this.props.reply.member.name}
+				<span className="comment--name">
+					{this.props.replyInfo.member.name}
 				</span>
-				<p className="text">
-					{this.props.reply.comment}
+				<p className="comment--text">
+					{this.props.replyInfo.comment}
 				</p>
+				<span>
+					{moment(moment(this.props.replyInfo.created)
+						.format("YYYYMMDD"))
+						.startOf("month")
+						.fromNow()}
+				</span>
 			</div>
 		)
 	}

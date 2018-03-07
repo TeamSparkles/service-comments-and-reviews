@@ -4,7 +4,6 @@ import $ from 'jquery';
 import Comment from './comment.jsx';
 import Replies from './replies.jsx';
 
-
 export default class CommentsSection extends React.Component {
 	constructor(props) {
 		super(props);
@@ -34,13 +33,13 @@ export default class CommentsSection extends React.Component {
 		if (this.state.loaded) {
       return (
         <div className="card card--hasHoverShadow">
-				<h2>Discussions ({this.state.commentsArray.length})</h2>
-				  {this.state.commentsArray.map((item, index) => 
-					  <Comment 
-							key={index}
-						  comment={item}
-					  />
-					)}
+				  <h2>Discussions ({this.state.commentsArray.length})</h2>
+				    {this.state.commentsArray.map((item, index) => 
+					    <Comment 
+							  key={index}
+						    commentInfo={item}
+					    />
+					  )}
 				</div>
 		  )
 	  } else {

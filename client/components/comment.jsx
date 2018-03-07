@@ -1,7 +1,7 @@
 import React from 'react';
 import Avatar from './avatar.jsx';
 import Replies from './replies.jsx';
-
+var moment = require('moment');
 
 export default class Comment extends React.Component {
   constructor(props) {
@@ -14,18 +14,24 @@ export default class Comment extends React.Component {
 			  <span>
 				  <Avatar />
 				</span>
-				<span className="card--name">
-				  {this.props.comment.member.name}
+				<span className="comment--name">
+				  {this.props.commentInfo.member.name}
 				</span>
-				<p className="text">
-				  {this.props.comment.comment}
+				<p className="comment--text">
+				  {this.props.commentInfo.comment}
 				</p>
+				<span>
+					{moment(moment(this.props.commentInfo.created)
+						.format("YYYYMMDD"))
+						.startOf("month")
+						.fromNow()}
+				</span>
 				<div className="comment--replies--block">
 					<span>
-						{this.props.comment.replies.map((reply, index) => 
+						{this.props.commentInfo.replies.map((reply, index) => 
 							<Replies 
 								key={index}
-								reply={reply}
+								replyInfo={reply}
 							/>
 						)}
 				</span>
