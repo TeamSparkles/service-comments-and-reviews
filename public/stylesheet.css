@@ -73,6 +73,10 @@ body {
   padding-left: 56px; 
 }
 
+.replies {
+  padding: 10px;
+}
+
 .replies--block {
   margin-top: 20px;
   margin-left: 56px;

@@ -10,7 +10,7 @@ export default class Replies extends React.Component {
 
 	render() {
 		return (
-		  <div>
+		  <div className="replies">
 				<span>
 					<Avatar isReply={true}/>
 				</span>

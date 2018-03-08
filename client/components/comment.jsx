@@ -10,9 +10,8 @@ export default class Comment extends React.Component {
 	}
 
 	render() {
-		console.log(moment(this.props.commentInfo.created));
     return (
-			<div>
+			<div className="comment">
 			  <span>
 				  <Avatar />
 				</span>
