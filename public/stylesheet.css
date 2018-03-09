@@ -103,3 +103,8 @@ body {
   border: none;
   outline: none;
 }
+
+.svg--like--icon {
+  fill: rgba(46,62,72,.6);
+  float: left;
+}
