@@ -68,10 +68,16 @@ var getData = (callback) => {
   Comments.find(callback);
 }
 
-// retrieve all comments associated with an event ID
+// retrieve all the comments associated with a specific event ID
 var getSingleComment = (commentsId, callback) => {
   Comments.findOne({id: commentsId}).exec(callback);
 }
 
+// retrieve user pictures
+var getUserThumbnail = (thumbnailUrl, callback) => {
+  Comments.findOne({'comments.member.photo.thumb_link': thumbnailUrl}).execute(callback);
+}
+
 module.exports.getData = getData;
 module.exports.getSingleComment = getSingleComment; 
+module.exports.getUserThumbnail = getUserThumbnail;

@@ -1,6 +1,7 @@
 import React from 'react';
 import Avatar from './avatar.jsx';
 import Date from './date.jsx';
+import Likes from './likes.jsx';
 var moment = require('moment');
 
 export default class Replies extends React.Component {
@@ -9,6 +10,7 @@ export default class Replies extends React.Component {
 	}
 
 	render() {
+    console.log(this.props.replyInfo);
 		return (
 		  <div className="replies">
 				<span>
@@ -26,6 +28,9 @@ export default class Replies extends React.Component {
 						isReply={true}	
 					/>
 				</span>
+        <span>
+          <Likes likecount={this.props.replyInfo.like_count}/>
+        </span>
 			</div>
 		)
 	}
