@@ -16,8 +16,7 @@ app.get('/events/:event_id/comments', function(req, res) {
   var eventID = req.params.event_id;
   //console.log(req.params.event_id);
   console.log(req.body);
-  
-  
+
   db.getSingleComment(eventID, (err, result) => {
     if (err) {
       console.error(err);
@@ -26,16 +25,7 @@ app.get('/events/:event_id/comments', function(req, res) {
       res.json(result);
     }
   })
-
-  // db.getUserThumbnail(thumbnailUrl, (err, result) => {
-  //   if (err) {
-  //     console.error(err);
-  //   } else {
-  //     console.log(result);
-  //     res.json(result);
-  //   }
-  // })
-
+  
 });
 
 app.listen(port, () => {

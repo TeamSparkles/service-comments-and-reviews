@@ -2,7 +2,7 @@ import React from 'react';
 import Avatar from './avatar.jsx';
 import Replies from './replies.jsx';
 import Date from './date.jsx';
-import Likes from './likes.jsx';
+import LikeCount from './likeCount.jsx';
 var moment = require('moment');
 
 export default class Comment extends React.Component {
@@ -27,7 +27,7 @@ export default class Comment extends React.Component {
 					<Date unitTimeConverter={moment(this.props.commentInfo.created).format("YYYYMMDD")}/>
 				</span>
 				<span>
-					<Likes likecount={this.props.commentInfo.like_count}/>		
+					<LikeCount likecount={this.props.commentInfo.like_count}/>		
 				</span>
 				<div className="replies--block">
 					<span>

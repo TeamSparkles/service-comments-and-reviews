@@ -1,6 +1,7 @@
 import React from 'react';
+import LikeIcon from './likeIcon.jsx';
 
-export default class Likes extends React.Component {
+export default class LikeCount extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -19,6 +20,7 @@ export default class Likes extends React.Component {
 		console.log(this.state.likecount);
 		return (
 			<button className="likecount" onClick={(e) => this.handleClick(e)}>
+				<LikeIcon />
 				{this.state.likecount} likes 
 			</button>
 		)
