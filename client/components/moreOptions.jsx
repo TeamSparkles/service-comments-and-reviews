@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class MoreOptionsIcon extends React.Component {
+export default class MoreOptions extends React.Component {
 	constructor(props) {
 		super(props);
 	}
