@@ -23,15 +23,12 @@ Run `npm run start` to start this service on 'localhost:3000' and `npm run build
 
 Data is stored in MongoDB and follows the exact same schema that MeetUp uses on their website. To request the comments and replies data in JSON for a specific event, run `mongo` and `use meetup` to get the id of each event, then navigate to 'http://localhost:3000/events/event_id/comments'. Data shape can be referenced in `schema.js`. For more information on the POST and DELETE requests of comments and replies, visit https://www.meetup.com/meetup_api/docs/:urlname/events/:event_id/comments/#list.
 
-User profile pictures are stored in Cloudinary. To install Cloudinary, run `npm install cloudinary-core --save`.  
-
 ## Requirements
 
 An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 
 - Node 6.13.0
 - Webpack 3.11.0
-- Cloudinary-react 1.0.6
 
 ## Development
 
@@ -43,6 +40,5 @@ From within the root directory:
 npm install
 npm install -g webpack
 npm install -g nodemon
-npm install cloudinary-core --save
 ```
 
