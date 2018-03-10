@@ -95,7 +95,7 @@ body {
   padding-left: 44px;
 }
 
-.likecount {
+.likecount--button {
   float: right;
   color: rgba(46,62,72,.6);
   font-size: 13px;
@@ -107,6 +107,12 @@ body {
 .svg--like--icon {
   fill: rgba(46,62,72,.6);
   float: left;
+}
+
+.moreOptions--button {
+  float: right;
+  border: none;
+  outline: none;
 }
 
 .svg--moreOptions--icon {

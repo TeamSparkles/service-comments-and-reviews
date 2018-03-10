@@ -12,7 +12,6 @@ export default class Comment extends React.Component {
 	}
 
 	render() {
-		{console.log(this.props.commentInfo.like_count)}
     return (
 			<div className="comment">
 			  <span>

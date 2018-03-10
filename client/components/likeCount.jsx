@@ -17,9 +17,8 @@ export default class LikeCount extends React.Component {
 	}
 
 	render() {
-		console.log(this.state.likecount);
 		return (
-			<button className="likecount" onClick={(e) => this.handleClick(e)}>
+			<button className="likecount--button" onClick={(e) => this.handleClick(e)}>
 				<LikeIcon /> 
 				{this.state.likecount} likes 
 			</button>

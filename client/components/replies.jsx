@@ -11,7 +11,6 @@ export default class Replies extends React.Component {
 	}
 
 	render() {
-    console.log(this.props.replyInfo);
 		return (
 		  <div className="replies">
 				<span>
