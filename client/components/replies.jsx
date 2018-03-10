@@ -2,6 +2,7 @@ import React from 'react';
 import Avatar from './avatar.jsx';
 import Date from './date.jsx';
 import LikeCount from './likeCount.jsx';
+import MoreOptionsIcon from './moreOptionsIcon.jsx';
 var moment = require('moment');
 
 export default class Replies extends React.Component {
@@ -19,6 +20,9 @@ export default class Replies extends React.Component {
 				<span className="comment--name">
 					{this.props.replyInfo.member.name}
 				</span>
+        <span>
+          <MoreOptionsIcon />
+        </span>
 				<p className="replies--text">
 					{this.props.replyInfo.comment}
 				</p>

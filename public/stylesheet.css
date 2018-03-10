@@ -108,3 +108,8 @@ body {
   fill: rgba(46,62,72,.6);
   float: left;
 }
+
+.svg--moreOptions--icon {
+  fill: rgba(46,62,72,.6);
+  float: right;
+}
