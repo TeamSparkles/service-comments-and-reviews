@@ -10,7 +10,7 @@ export default class CommentsSection extends React.Component {
 		this.state = {
 			event_id: 241049102,
 			commentsArray: [],
-			loaded: false
+			loaded: false,
 		}
 	}
 
@@ -23,11 +23,10 @@ export default class CommentsSection extends React.Component {
 			success: (data) => {
 				this.setState({
 					commentsArray: data.comments,
-					loaded: true
+					loaded: true,
 				}); 
 			}
 		});	
-
 	}
 
 	render() {

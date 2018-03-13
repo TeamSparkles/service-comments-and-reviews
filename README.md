@@ -23,6 +23,12 @@ Run `npm run start` to start this service on 'localhost:3000' and `npm run build
 
 Data is stored in MongoDB and follows the exact same schema that MeetUp uses on their website. To request the comments and replies data in JSON for a specific event, run `mongo` and `use meetup` to get the id of each event, then navigate to 'http://localhost:3000/events/event_id/comments'. Data shape can be referenced in `schema.js`. For more information on MeetUp's RESTful HTTP interfaces, visit https://www.meetup.com/meetup_api/docs/:urlname/events/:event_id/comments/#list.
 
+<img width="1045" alt="screen shot 2018-03-13 at 11 08 02 am" src="https://user-images.githubusercontent.com/31831596/37360952-eb3d8c36-26ae-11e8-84db-7701bd48c190.png">
+
+<img width="564" alt="screen shot 2018-03-13 at 11 13 04 am" src="https://user-images.githubusercontent.com/31831596/37361212-9ce46964-26af-11e8-855c-e77e6239026b.png">
+
+
+
 ## Requirements
 
 An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
