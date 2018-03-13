@@ -14,8 +14,9 @@ This module renders a list of comments and replies posted in a given MeetUp even
 ## Table of Contents
 
 1. [Usage](#Usage)
-2. [Requirements](#requirements)
-3. [Development](#development)
+2. [Components](#Components)
+3. [Requirements](#requirements)
+4. [Development](#development)
 
 ## Usage
 
@@ -27,7 +28,20 @@ Data is stored in MongoDB and follows the exact same schema that MeetUp uses on 
 
 <img width="564" alt="screen shot 2018-03-13 at 11 13 04 am" src="https://user-images.githubusercontent.com/31831596/37361212-9ce46964-26af-11e8-855c-e77e6239026b.png">
 
+## Components
 
+Following the principle of separation of concerns, I divided my service into eight components:
+
+1. **client/components/avatar.jsx** renders a user profile picture. (The functionality of this component is incomplete.)
+2. **client/components/commentsSection.jsx** renders the entire comment section for one event.
+3. **client/components/comment.jsx** renders a comment.
+4. **client/components/replies.jsx** renders all of the replies associated with a comment.
+5. **client/components/date.jsx** renders the date when a comment or a reply was created. I use Moment.js to convert unix epoch time to "x months ago".
+6. **client/components/likecount.jsx** renders the number of likes a comment or reply receives.
+7. **client/components/likeIcon.jsx** renders the SVG like icon.
+8. **client/components/moreOptions.jsx** renders the SVG vertical ellipsis icon with a popup that allows users to report inappropriate comments.
+
+Note: the design of the comments section of each MeetUp event page is inconsistent around and about the site. Some do not have the like icon, others do not allow users to reply. I followed the design of the event with the id of '241049102' but added the like icon and vertical ellipsis icon to enrich my service. 
 
 ## Requirements
 
