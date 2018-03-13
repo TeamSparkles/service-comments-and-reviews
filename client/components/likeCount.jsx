@@ -25,3 +25,4 @@ export default class LikeCount extends React.Component {
 		)
 	}
 }
+

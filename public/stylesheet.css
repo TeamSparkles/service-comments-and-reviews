@@ -109,13 +109,14 @@ body {
   float: left;
 }
 
-.moreOptions--button {
-  float: right;
-  border: none;
-  outline: none;
-}
-
 .svg--moreOptions--icon {
   fill: rgba(46,62,72,.6);
   float: right;
+}
+
+.moreOptions--popup {
+  float: right;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }

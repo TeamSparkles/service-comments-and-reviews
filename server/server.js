@@ -14,8 +14,6 @@ app.use(bodyParser.json());
 /** serving json data at this route */
 app.get('/events/:event_id/comments', function(req, res) {
   var eventID = req.params.event_id;
-  //console.log(req.params.event_id);
-  console.log(req.body);
 
   db.getSingleComment(eventID, (err, result) => {
     if (err) {
