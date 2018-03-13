@@ -1,7 +1,5 @@
 import React from 'react';
 import reactDOM from 'react-dom';
-//import { Icon, Button, Popover } from 'antd';
-// import 'antd/dist/antd.css'; 
 import Popup from 'reactjs-popup';
 
 export default class MoreOptions extends React.Component {
