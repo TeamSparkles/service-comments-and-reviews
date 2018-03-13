@@ -68,10 +68,11 @@ var getData = (callback) => {
   Comments.find(callback);
 }
 
-// retrieve all comments associated with an event ID
+// retrieve all the comments associated with a specific event ID
 var getSingleComment = (commentsId, callback) => {
   Comments.findOne({id: commentsId}).exec(callback);
 }
 
 module.exports.getData = getData;
 module.exports.getSingleComment = getSingleComment; 
+

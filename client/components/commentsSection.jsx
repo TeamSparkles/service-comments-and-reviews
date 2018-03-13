@@ -4,14 +4,13 @@ import $ from 'jquery';
 import Comment from './comment.jsx';
 import Replies from './replies.jsx';
 
-
 export default class CommentsSection extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			event_id: 241049102,
 			commentsArray: [],
-			loaded: false,
+			loaded: false
 		}
 	}
 
@@ -28,21 +27,20 @@ export default class CommentsSection extends React.Component {
 				}); 
 			}
 		});	
+
 	}
 
 	render() {
 		if (this.state.loaded) {
-			console.log(this.state.commentsArray);
-			
       return (
         <div className="card card--hasHoverShadow">
-				<h2>Discussions ({this.state.commentsArray.length})</h2>
-				  {this.state.commentsArray.map((item, index) => 
-					  <Comment 
-							key={index}
-						  comment={item}
-					  />
-					)}
+				  <h2>Discussions ({this.state.commentsArray.length})</h2>
+				    {this.state.commentsArray.map((item, index) => 
+					    <Comment 
+							  key={index}
+						    commentInfo={item}
+					    />
+					  )}
 				</div>
 		  )
 	  } else {

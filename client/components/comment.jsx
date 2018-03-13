@@ -1,6 +1,10 @@
 import React from 'react';
 import Avatar from './avatar.jsx';
 import Replies from './replies.jsx';
+import Date from './date.jsx';
+import LikeCount from './likeCount.jsx';
+import MoreOptions from './moreOptions.jsx';
+var moment = require('moment');
 
 export default class Comment extends React.Component {
   constructor(props) {
@@ -8,24 +12,32 @@ export default class Comment extends React.Component {
 	}
 
 	render() {
-		console.log(this.props.comment.replies);
     return (
-			<div>
+			<div className="comment">
 			  <span>
 				  <Avatar />
 				</span>
-				<span className="card--name">
-				  {this.props.comment.member.name}
+				<span className="comment--name">
+				  {this.props.commentInfo.member.name}
 				</span>
-				<p className="text">
-				  {this.props.comment.comment}
+				<span>
+					<MoreOptions />
+				</span>
+				<p className="comment--text">
+				  {this.props.commentInfo.comment}
 				</p>
-				<div className="comment--replies--block">
+				<span>
+					<Date unitTimeConverter={moment(this.props.commentInfo.created).format("YYYYMMDD")}/>
+				</span>
+				<span>
+					<LikeCount likecount={this.props.commentInfo.like_count}/>		
+				</span>
+				<div className="replies--block">
 					<span>
-						{this.props.comment.replies.map((reply, index) => 
+						{this.props.commentInfo.replies.map((reply, index) => 
 							<Replies 
 								key={index}
-								reply={reply}
+								replyInfo={reply}
 							/>
 						)}
 				</span>
