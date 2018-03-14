@@ -19,11 +19,9 @@ app.get('/events/:event_id/comments', function(req, res) {
     if (err) {
       console.error(err);
     } else {
-      console.log(result);
       res.json(result);
     }
   })
-  
 });
 
 app.listen(port, () => {
